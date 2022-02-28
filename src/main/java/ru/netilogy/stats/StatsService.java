@@ -64,8 +64,9 @@ public class StatsService {
     public double numberOfMonthAboveAverageSales(double[] salesPerMonth) {
         int monthAboveAverageSales = 0;
         double averageSum = averageMonthlySales(salesPerMonth);
-        for (double sumPerMonth : salesPerMonth)
+        for (double sumPerMonth : salesPerMonth) {
             if (averageSum < sumPerMonth) monthAboveAverageSales = monthAboveAverageSales + 1;
+        }
         return monthAboveAverageSales;
     }
 }
